@@ -18,15 +18,14 @@ struct ToastResult : Codable{
 }
 
 @objcMembers public class SampleKit : NSObject{
-    
-    public static let shared = SampleKit()
-    
+        
     let messenger: Messenger
     
     var toastCount = 0
-    private override init() {
+    public override init() {
         messenger = Messenger()
         super.init()
+        prepare()
         
     }
     
