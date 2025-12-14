@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct NodeInfo : Codable{
+@objcMembers
+public class NodeInfo : NSObject, Codable{
     let messageOwnerId: Int
     let publisherId: Int
     
@@ -17,7 +18,8 @@ public struct NodeInfo : Codable{
     }
 }
 
-public struct MessageInfo : Codable{
+@objcMembers
+public class MessageInfo : NSObject, Codable{
     let nodeInfo: NodeInfo
     let topic: Topic
     let replyTopic: Topic
@@ -29,7 +31,8 @@ public struct MessageInfo : Codable{
     }
 }
 
-public struct Message{
+@objcMembers
+public class Message : NSObject{
     public let info : MessageInfo
     public let payload : Payload
     
@@ -43,10 +46,8 @@ public struct Message{
     }
     
     init(nodeInfo: NodeInfo, topic: Topic, replyTopic: Topic, payload: Payload){
-        self.init(
-            info: MessageInfo(nodeInfo: nodeInfo, topic: topic, replyTopic: replyTopic),
-            payload: payload
-        )
+        self.info = MessageInfo(nodeInfo: nodeInfo, topic: topic, replyTopic: replyTopic)
+        self.payload = payload
     }
     
     public func data<T: Codable>() -> T?{

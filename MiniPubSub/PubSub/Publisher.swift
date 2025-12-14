@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+@objcMembers
 public class Publisher : Node{
     static let idCounter = IdConuter()
     

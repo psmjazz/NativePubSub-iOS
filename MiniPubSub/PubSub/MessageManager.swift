@@ -7,10 +7,11 @@
 
 import Foundation
 
-public class MessageManager{
+@objcMembers
+public class MessageManager : NSObject{
     public static let shared = MessageManager()
     
-    private init(){
+    private override init(){
         mediator = MessageMediatorImpl()
     }
     

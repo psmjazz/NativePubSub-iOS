@@ -7,6 +7,7 @@
 
 import Foundation
 
+@objcMembers
 public final class Messenger : Publisher{
     
     private let target: SdkType

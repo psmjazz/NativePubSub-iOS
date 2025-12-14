@@ -7,6 +7,7 @@
 
 import Foundation
 
+@objc
 public enum SdkType : Int, Codable{
     case native     = 0
     case game       = 1

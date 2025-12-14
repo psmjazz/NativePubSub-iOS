@@ -8,7 +8,8 @@
 import Foundation
 
 
-public struct Topic: Codable{
+@objcMembers
+public class Topic: NSObject, Codable{
     public let key: String
     public let target: SdkType
     

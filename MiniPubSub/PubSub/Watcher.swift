@@ -7,6 +7,7 @@
 
 import Foundation
 
+@objcMembers
 public class Watcher: Node{
     
     private static let watcherKey = "Key_Watcher_Reserved"

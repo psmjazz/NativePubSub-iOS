@@ -24,6 +24,9 @@
 		C4B08F662B5A4A270082917E /* MessageMediatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B08F652B5A4A270082917E /* MessageMediatorImpl.swift */; };
 		C4E1B40C2C8361D100381FE8 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B40B2C8361D100381FE8 /* Publisher.swift */; };
 		C4E1B40E2C83624D00381FE8 /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B40D2C83624D00381FE8 /* Receiver.swift */; };
+		C4E8A0E72EEEED2B00660527 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E8A0E62EEEED2B00660527 /* DataExtension.swift */; };
+		C4E8A0EA2EEEEF0A00660527 /* ModuleLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E8A0E92EEEEF0A00660527 /* ModuleLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4E8A0EC2EEEEF5A00660527 /* ModuleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8A0EB2EEEEF5A00660527 /* ModuleLoader.m */; };
 		C4FC07052CB41B5C006EF3EE /* ObjcSide.h in Headers */ = {isa = PBXBuildFile; fileRef = C49F99672B5B7E9900047CAA /* ObjcSide.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		C4B08F652B5A4A270082917E /* MessageMediatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMediatorImpl.swift; sourceTree = "<group>"; };
 		C4E1B40B2C8361D100381FE8 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		C4E1B40D2C83624D00381FE8 /* Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
+		C4E8A0E62EEEED2B00660527 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		C4E8A0E92EEEEF0A00660527 /* ModuleLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleLoader.h; sourceTree = "<group>"; };
+		C4E8A0EB2EEEEF5A00660527 /* ModuleLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				C40C9D1A2D5A316000007BEB /* Message.swift */,
 				C40C9D1C2D5B817600007BEB /* SdkInfo.swift */,
 				C4475BB02D8FF61300B68CCE /* Topic.swift */,
+				C4E8A0E62EEEED2B00660527 /* DataExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 		C4B08F5B2B5A43870082917E /* PubSub */ = {
 			isa = PBXGroup;
 			children = (
+				C4E8A0E82EEEEED800660527 /* Module */,
 				C43B5AF22C4D521300D1C9C1 /* Data */,
 				C4B08F632B5A49D40082917E /* MessageMediator.swift */,
 				C4B08F652B5A4A270082917E /* MessageMediatorImpl.swift */,
@@ -151,6 +159,15 @@
 			path = PubSub;
 			sourceTree = "<group>";
 		};
+		C4E8A0E82EEEEED800660527 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C4E8A0E92EEEEF0A00660527 /* ModuleLoader.h */,
+				C4E8A0EB2EEEEF5A00660527 /* ModuleLoader.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FC07052CB41B5C006EF3EE /* ObjcSide.h in Headers */,
+				C4E8A0EA2EEEEF0A00660527 /* ModuleLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E8A0EC2EEEEF5A00660527 /* ModuleLoader.m in Sources */,
 				C40C9D1D2D5B817600007BEB /* SdkInfo.swift in Sources */,
 				C4475BB12D8FF61300B68CCE /* Topic.swift in Sources */,
 				C49F99692B5B7EF000047CAA /* ObjcSide.m in Sources */,
 				C4475BB32DBFB5F800B68CCE /* Handler.swift in Sources */,
 				C40C9D1B2D5A316000007BEB /* Message.swift in Sources */,
+				C4E8A0E72EEEED2B00660527 /* DataExtension.swift in Sources */,
 				C41348D12C54FC9300F2C4F2 /* Watcher.swift in Sources */,
 				C4B08F642B5A49D40082917E /* MessageMediator.swift in Sources */,
 				C49F99902B5CB1BF00047CAA /* Messenger.swift in Sources */,

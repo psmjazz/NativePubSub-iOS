@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Node{
+public class Node : NSObject{
     private static let idCounter = IdConuter()
     let id: Int = idCounter.getNext()
 }
